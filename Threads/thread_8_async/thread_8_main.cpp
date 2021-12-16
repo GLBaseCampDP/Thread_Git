@@ -1,13 +1,14 @@
 #include <iostream>
 #include <future>
 #include <thread>
+using namespace std;
 
 int calculate() {
   return 2 * 2;
 }
 
 int main() {
-  std::future<int> result =
-       std::async(calculate);
-  std::cout << result.get() << std::endl;
+  future<int> result =
+       async(calculate);
+  cout << result.get() << endl;
 }
